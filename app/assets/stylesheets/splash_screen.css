@@ -40,7 +40,7 @@
 }
 
 .title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .title .saveit {
@@ -50,12 +50,18 @@
   text-shadow: 2px 2px #ed7e7e;
 }
 
-.title p {
+.title .slogan {
   font-size: 18px;
   font-weight: bold;
   background-color: #3778c2;
   color: #fff;
   margin-top: 20px;
+}
+
+.title .para {
+  font-size: 15px;
+  font-style: italic;
+  color: #6c757d;
 }
 
 /* Media query for screens with a maximum width of 768px (typical for mobile) */
