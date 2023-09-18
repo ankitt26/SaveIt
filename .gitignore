@@ -30,4 +30,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# environment variable
+.env
+
 node_modules/
