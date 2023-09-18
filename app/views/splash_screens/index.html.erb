@@ -1,8 +1,16 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Splash screens</h1>
-
-<div id="splash_screens">
- 
-   link
-</div>
+<main id="splash_screens">
+  <h4>Welcome to SaveIt ✨</h4>
+  <div class="design">
+    <%= image_tag 'Payment.png', class: "payment" %>
+  </div>
+  <div class="details">
+      <div class="title">
+        <h2 class="saveit"> SaveIt! </h2>
+          <p>"Save Money, Live Better"</p>
+      </div>
+      <div class="buttons">
+      <%= link_to "Login","" ,class: "login btn btn-success  " %>
+      <%= link_to "Registration","", class: "btn btn-secondary register" %>
+    </div>
+  </div>
+</main>
