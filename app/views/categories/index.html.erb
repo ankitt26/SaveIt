@@ -1,0 +1,10 @@
+
+
+<div id="categories">
+  <h1>Categories</h1>
+   <% @categories.each do |category| %>
+    <%= render category %>
+  <% end %>
+</div>
+
+<%= link_to "New category", new_category_path %>
