@@ -12,16 +12,19 @@ class SpendsController < ApplicationController
 
   # GET /spends/new
   def new
-    @spend = Spend.new
+    @category = Category.find(params[:category_id])
+    # @category_id = params[:category_id]
+    @spend = @category.spends.build
   end
 
    # POST /spends or /spends.json
   def create
+    @category_id = params[:category_id]
     @spend = Spend.new(spend_params)
 
     respond_to do |format|
       if @spend.save
-        format.html { redirect_to spend_url(@spend), notice: "Spend was successfully created." }
+        format.html { redirect_to category_spends_path(@category_id), notice: "Spend was successfully created." }
         format.json { render :show, status: :created, location: @spend }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -48,6 +51,6 @@ class SpendsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def spend_params
-      params.require(:spend).permit(:author_id,:name, :amount, :category_id :created_at) # Permit the 'name' and 'icon' attributes
+      params.require(:spend).permit(:author_id, :name, :amount, :created_at).merge(category_id: @category_id)
     end
 end

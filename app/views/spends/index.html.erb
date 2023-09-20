@@ -1,8 +1,9 @@
 <div id="spends">
   <h1>Spends</h1>
+   <div> <%= link_to "Back to categories", categories_path %> </div>
   <% @spends.each do |spend| %>
     <%= render spend %>
   <% end %>
 </div>
 
-<%= link_to "New spend", new_spend_path, class: "new-category" %>
+<%= link_to "New spend", new_category_spend_path, class: "new-category" %>
