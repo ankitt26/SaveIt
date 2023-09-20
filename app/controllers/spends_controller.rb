@@ -48,6 +48,6 @@ class SpendsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def spend_params
-      params.require(:spend).permit(:author_id,:name, :amount, :created_at) # Permit the 'name' and 'icon' attributes
+      params.require(:spend).permit(:author_id,:name, :amount, :category_id :created_at) # Permit the 'name' and 'icon' attributes
     end
 end
