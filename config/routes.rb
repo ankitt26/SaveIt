@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :spends
   resources :categories
   devise_for :users
   root "splash_screens#index"
