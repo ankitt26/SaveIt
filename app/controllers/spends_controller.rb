@@ -3,8 +3,12 @@ class SpendsController < ApplicationController
 
   # GET /spends or /spends.json
   def index
-    @spends = Spend.all
+    @c_id = params[:category_id]
+    @spends = Spend.where(category_id: @c_id)
+    @category_name = Category.find(@c_id).name
   end
+  
+  
 
   # GET /spends/1 or /spends/1.json
   def show
