@@ -3,9 +3,9 @@ class SpendsController < ApplicationController
 
   # GET /spends or /spends.json
   def index
-    @c_id = params[:category_id]
-    @spends = Spend.where(category_id: @c_id)
-    @category_name = Category.find(@c_id).name
+    c_id = params[:category_id]
+    @category = Category.find(c_id)
+    @spends = @category.spends
   end
 
   # GET /spends/1 or /spends/1.json
@@ -13,9 +13,7 @@ class SpendsController < ApplicationController
 
   # GET /spends/new
   def new
-    @category = Category.find(params[:category_id])
-    # @category_id = params[:category_id]
-    @spend = @category.spends.build
+  
   end
 
   # POST /spends or /spends.json
