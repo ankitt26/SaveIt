@@ -53,6 +53,6 @@ class SpendsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def spend_params
-    params.require(:spend).permit(:author_id, :name, :amount, :created_at).merge(category_id: @category_id)
+    params.require(:spend).permit(:author_id, :name, :amount, :created_at, :category_id)
   end
 end
