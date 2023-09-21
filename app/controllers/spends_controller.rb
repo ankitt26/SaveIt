@@ -5,7 +5,7 @@ class SpendsController < ApplicationController
   def index
     c_id = params[:category_id]
     @category = Category.find(c_id)
-    @spends = @category.spends
+    @spends = @category.spends.order(created_at: :desc)
   end
 
   # GET /spends/new
