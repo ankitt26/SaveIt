@@ -5,18 +5,22 @@ class SpendsController < ApplicationController
 def index
   c_id = params[:category_id]
   @category = Category.find(c_id)
+  authorize! :read, @category # Ensure the user has permission to read this category
+
   @spends = @category.spends.where(user_id: current_user.id).order(created_at: :desc)
 end
 
   # GET /spends/new
   def new
     @category = Category.find(params[:category_id])
+    authorize! :create, @category
     @spend = @category.spends.build
   end
 
   # POST /spends or /spends.json
   def create
     @category = Category.find(params[:spend][:category_id])
+    authorize! :create, @category
     @spend = @category.spends.build(spend_params)
     puts "Parameters received from the form: #{params.inspect}"
 
