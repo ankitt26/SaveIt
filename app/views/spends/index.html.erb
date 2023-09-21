@@ -1,0 +1,19 @@
+<div id="spends">
+  <h1>Spends</h1>
+  <h2><%= @category.name.capitalize %> Transactions</h2>
+   <div> <%= link_to "Back to categories", categories_path %> </div>
+   
+   <% total_value = 0 %>
+   <% @spends.each do |spend| %>
+     <% total_value += spend.amount %> 
+   <% end %>
+
+   <h3> $<%= total_value %></h3>
+
+  <% @spends.each do |spend| %>
+    <%= render spend %>
+  <% end %>
+  
+</div>
+
+<%= link_to "New spend", new_category_spend_path, class: "new-category" %>

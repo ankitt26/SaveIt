@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.all.order(created_at: :desc)
   end
 
   # GET /categories/1 or /categories/1.json
@@ -38,6 +38,6 @@ class CategoriesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def category_params
-    params.require(:category).permit(:name, :icon) # Permit the 'name' and 'icon' attributes
+    params.require(:category).permit(:user_id, :name, :icon) # Permit the 'name' and 'icon' attributes
   end
 end

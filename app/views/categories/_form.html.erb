@@ -20,7 +20,8 @@
     <%= form.label :icon %><br />
     <%= form.text_field :icon, autofocus: true, autocomplete: "icon" %>
   </div>
-  
+
+  <%= form.hidden_field :user_id, value:current_user.id%>
   <div>
     <%= form.submit %>
   </div>
