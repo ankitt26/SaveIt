@@ -1,12 +1,12 @@
 class SpendsController < ApplicationController
   before_action :set_spend, only: %i[show edit update destroy]
 
-  # GET /spends or /spends.json
-  def index
-    c_id = params[:category_id]
-    @category = Category.find(c_id)
-    @spends = @category.spends.order(created_at: :desc)
-  end
+# GET /spends or /spends.json
+def index
+  c_id = params[:category_id]
+  @category = Category.find(c_id)
+  @spends = @category.spends.where(user_id: current_user.id).order(created_at: :desc)
+end
 
   # GET /spends/new
   def new
