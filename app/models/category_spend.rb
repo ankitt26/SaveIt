@@ -1,0 +1,2 @@
+class CategorySpend < ApplicationRecord
+end
