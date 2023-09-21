@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.where(user_id: current_user.id).order(created_at: :desc)
   end
-  
+
   # GET /categories/new
   def new
     @category = Category.new
