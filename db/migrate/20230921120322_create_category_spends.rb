@@ -1,4 +1,4 @@
-class CreateCategoriesSpends < ActiveRecord::Migration[7.0]
+class CreateCategorySpends < ActiveRecord::Migration[7.0]
   def change
     create_table :categories_spends do |t|
       t.references :category, null: false, foreign_key: true

@@ -8,37 +8,26 @@ class SpendsController < ApplicationController
     @spends = @category.spends
   end
 
-  # GET /spends/1 or /spends/1.json
-  def show; end
-
   # GET /spends/new
   def new
-  
+    @category = Category.find(params[:category_id])
+    @spend = @category.spends.build
   end
 
   # POST /spends or /spends.json
   def create
-    @category_id = params[:category_id]
-    @spend = Spend.new(spend_params)
+    @category = Category.find(params[:spend][:category_id])
+    @spend = @category.spends.build(spend_params)
+    puts "Parameters received from the form: #{params.inspect}"
 
     respond_to do |format|
       if @spend.save
-        format.html { redirect_to category_spends_path(@category_id), notice: 'Spend was successfully created.' }
+        format.html { redirect_to category_spends_path(@category), notice: 'Spend was successfully created.' }
         format.json { render :show, status: :created, location: @spend }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @spend.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /spends/1 or /spends/1.json
-  def destroy
-    @spend.destroy
-
-    respond_to do |format|
-      format.html { redirect_to spends_url, notice: 'Spend was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
@@ -51,6 +40,6 @@ class SpendsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def spend_params
-    params.require(:spend).permit(:author_id, :name, :amount, :created_at, :category_id)
+    params.require(:spend).permit(:user_id, :name, :amount, :created_at, category_ids: [])
   end
 end

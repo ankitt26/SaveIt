@@ -1,5 +1,5 @@
-<%= form_with(model: [@category, @spend], url: category_spends_path(@category)) do |form| %>
-  <% if @spend.errors.any? %>
+<%= form_with(model: [@category, @spend], url: category_spends_path, method: :post) do |form| %>
+   <% if @spend.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(@spend.errors.count, "error") %> prohibited this spend from being saved:</h2>
       <ul>
@@ -9,8 +9,11 @@
       </ul>
     </div>
   <% end %>
+  
+  <!--form fields here -->
 
-  <%= form.hidden_field :author_id, value: current_user.id %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+  <%= form.hidden_field :category_id, value: @category.id %>
 
   <div class="field">
     <%= form.label :name %><br />
@@ -20,6 +23,11 @@
   <div class="field">
     <%= form.label :amount %><br />
     <%= form.text_field :amount, autofocus: true, autocomplete: "amount" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_ids, 'Categories' %>
+    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name %>
   </div>
 
   <div>
