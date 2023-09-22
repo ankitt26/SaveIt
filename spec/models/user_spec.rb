@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.new(name: "Ankit", email: "abc@gmail.com", password: "asd4f3g")
+    @user = User.new(name: 'Ankit', email: 'abc@gmail.com', password: 'asd4f3g')
   end
 
   context 'presence validations' do
