@@ -22,7 +22,6 @@ class SpendsController < ApplicationController
     @category = Category.find(params[:spend][:category_id])
     authorize! :create, @category
     @spend = @category.spends.build(spend_params)
-    puts "Parameters received from the form: #{params.inspect}"
 
     respond_to do |format|
       if @spend.save
