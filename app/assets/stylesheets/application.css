@@ -28,3 +28,18 @@
 .no-deco {
   text-decoration: none;
 }
+
+.back-top {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+
+.checkbox {
+  margin: 5px 2px 2px 10px;
+}
+
+/* categories = c */
+.c-icon {
+  width: 60px;
+}

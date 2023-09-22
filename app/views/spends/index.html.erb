@@ -1,20 +1,20 @@
 <div id="spends">
-  <h1>Spends</h1>
-  <h2><%= @category.name.capitalize %> Transactions</h2>
-    
-  <div>
+  <div class="back-top">
     <%= link_to categories_path, class: "no-deco" do %>
       <%= image_tag "previous.png", alt: "back button", class: "back" %>
     <% end %>
     <%# <%= link_to "Back to categories", categories_path, class: "btn btn-secondary btn-sm" %>  
   </div>
+  <h2 class="text-center mt-1"><%= @category.name.capitalize %> Transactions</h2>
+    
+  
 
   <% total_value = 0 %>
   <% @spends.each do |spend| %>
     <% total_value += spend.amount %> 
   <% end %>
 
-  <h3> 💵<%= total_value %></h3>
+  <h3> Total Spended 🎋🎀<%= total_value %></h3>
 
   <% @spends.each do |spend| %>
     <%= render spend %>
