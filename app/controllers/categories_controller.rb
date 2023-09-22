@@ -3,11 +3,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all.order(created_at: :desc)
+    @categories = Category.where(user_id: current_user.id).order(created_at: :desc)
   end
-
-  # GET /categories/1 or /categories/1.json
-  def show; end
 
   # GET /categories/new
   def new

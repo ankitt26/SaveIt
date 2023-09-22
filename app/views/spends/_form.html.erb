@@ -27,7 +27,7 @@
 
   <div class="field">
     <%= form.label :category_ids, 'Categories' %>
-    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name %>
+    <%= form.collection_check_boxes :category_ids, Category.where(user_id: current_user.id), :id, :name %>
   </div>
 
   <div>
