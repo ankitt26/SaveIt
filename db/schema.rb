@@ -23,13 +23,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_120322) do
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "categories_spends", force: :cascade do |t|
+  create_table "category_spends", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.bigint "spend_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_categories_spends_on_category_id"
-    t.index ["spend_id"], name: "index_categories_spends_on_spend_id"
+    t.index ["category_id"], name: "index_category_spends_on_category_id"
+    t.index ["spend_id"], name: "index_category_spends_on_spend_id"
   end
 
   create_table "spends", force: :cascade do |t|
@@ -55,7 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_120322) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "categories_spends", "categories"
-  add_foreign_key "categories_spends", "spends"
+  add_foreign_key "category_spends", "categories"
+  add_foreign_key "category_spends", "spends"
   add_foreign_key "spends", "users"
 end
