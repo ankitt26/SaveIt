@@ -1,6 +1,6 @@
 <%= form_with(model: [@category, @spend], url: category_spends_path, method: :post) do |form| %>
-   <% if @spend.errors.any? %>
-    <div style="color: red">
+  <% if @spend.errors.any? %>
+    <div class="alert alert-danger">
       <h2><%= pluralize(@spend.errors.count, "error") %> prohibited this spend from being saved:</h2>
       <ul>
         <% @spend.errors.each do |error| %>
@@ -10,27 +10,28 @@
     </div>
   <% end %>
   
-  <!--form fields here -->
+  <!-- Form fields here -->
 
   <%= form.hidden_field :user_id, value: current_user.id %>
   <%= form.hidden_field :category_id, value: @category.id %>
 
-  <div class="field">
-    <%= form.label :name %><br />
-    <%= form.text_field :name, autofocus: true, autocomplete: "name" %>
+  <div class="form-group mt-2">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", autofocus: true, autocomplete: "name" %>
   </div>
 
-  <div class="field">
-    <%= form.label :amount %><br />
-    <%= form.text_field :amount, autofocus: true, autocomplete: "amount" %>
+  <div class="form-group mt-2">
+    <%= form.label :amount %>
+    <%= form.text_field :amount, class: "form-control", autofocus: true, autocomplete: "amount" %>
   </div>
 
-  <div class="field">
+  <div class="form-group mt-2">
     <%= form.label :category_ids, 'Categories' %>
+    <br>
     <%= form.collection_check_boxes :category_ids, Category.where(user_id: current_user.id), :id, :name %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group mt-2">
+    <%= form.submit "Create Spend", class: "btn btn-primary" %>
   </div>
 <% end %>
