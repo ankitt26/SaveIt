@@ -19,3 +19,12 @@
   opacity: 0.5;
   margin: 2px auto auto 2px;
 }
+
+.back {
+  width: 30px;
+  margin: 2px -3px auto 2px;
+}
+
+.no-deco {
+  text-decoration: none;
+}
