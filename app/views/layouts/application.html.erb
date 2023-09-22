@@ -13,9 +13,7 @@
   </head>
 
   <body>
-  <% if user_signed_in?%>
-  <%= link_to "Sign Out", destroy_user_session_path, class: "", data: { turbo_method: :delete } %>
-<% end %>
+ 
    <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>

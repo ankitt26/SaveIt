@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.switch {
+  width: 30px;
+  opacity: 0.5;
+  margin: 2px auto auto 2px;
+}

@@ -1,3 +1,7 @@
+ <% if user_signed_in?%>
+  <%= link_to destroy_user_session_path, method: :delete, data: { turbo_method: :delete } do %>
+  <%= image_tag "switch.png", alt: "Sign Out", class: "switch" %>
+<% end %><% end %>
 <div id="categories">
   <h1>Categories</h1>
    <% @categories.each do |category| %>
