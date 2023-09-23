@@ -15,7 +15,7 @@
   <%= form.hidden_field :user_id, value: current_user.id %>
   <%= form.hidden_field :category_id, value: @category.id %>
 
-  <div class="form-group mt-2">
+  <div class="form-group mt-4">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control", autofocus: true, autocomplete: "name" %>
   </div>
