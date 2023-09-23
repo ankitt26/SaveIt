@@ -11,8 +11,10 @@
   <% @spends.each do |spend| %>
     <% total_value += spend.amount %> 
   <% end %>
-
-  <h3 class="total-spend"> Total Spended 🎋<%= total_value %></h3>
+<div class="total">
+  <h3 class="t-spend"> Total Spended :</h3>
+  <h3 class="t-value">$<%= total_value %> </h3>
+</div>
 <div class="spend-group">
   <% @spends.each do |spend| %>
     <%= render spend %>

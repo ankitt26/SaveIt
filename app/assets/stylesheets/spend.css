@@ -21,9 +21,18 @@
   text-align: center;
 }
 
-.total-spend {
+.total {
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 32px;
   color: #434b54;
   font-family: cursive;
+  background-color: #fff;
+  border: 2px solid rgb(216, 213, 213);
+  border-radius: 8px;
+  padding: 6px;
 }
 
 .spend-group {
@@ -49,7 +58,7 @@
 .spend-name {
   color: #434b54;
   opacity: 0.7;
-  font-weight: 700;
+  font-weight: 500;
   margin-left: 0;
 }
 
@@ -60,10 +69,16 @@
 }
 
 .spend-amount {
-  font-weight: 700;
+  font-weight: 500;
   font-family: cursive;
   color: #434b54;
-  min-width: 130px;
+  /* min-width: 130px; */
+  position: relative;
+  bottom: 20px;
+}
+
+.created-at {
+  color: rgb(115, 122, 122);
 }
 
 .extra {

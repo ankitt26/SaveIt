@@ -2,6 +2,6 @@
   <div id="<%= dom_id category %>" class="category">
     <img src="<%= category.icon %>" class="c-icon">
     <div class="extra"><h2 class="category-name"><%= category.name %></h2></div>
-    <h2 class="category-sum">💵<%= category.spends.sum(:amount) %></h2>
+    <h2 class="category-sum">$<%= category.spends.sum(:amount) %></h2>
   </div>
 </a>
