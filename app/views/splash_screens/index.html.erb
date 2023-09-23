@@ -1,0 +1,17 @@
+<main id="splash_screens">
+  <h4>Welcome to SaveIt ✨</h4>
+  <div class="design">
+    <%= image_tag 'Payment.png', class: "payment" %>
+  </div>
+  <div class="details">
+      <div class="title">
+        <h2 class="saveit"> SaveIt! </h2>
+          <p class="slogan">"Save Money, Live Better"</p>
+          <p class="para">Every entry unlocks savings potential, guiding you toward financial security and a brighter future.</p>
+      </div>
+      <div class="buttons">
+      <%= link_to "Sign in", new_user_session_path ,class: "login btn btn-success" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-light register" %>
+    </div>
+  </div>
+</main>

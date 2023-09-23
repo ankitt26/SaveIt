@@ -1,0 +1,80 @@
+/* Default styles for all screen sizes */
+#splash_screens {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  padding-top: 30px;
+}
+
+#splash_screens h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #434b54;
+}
+
+.design {
+  margin-bottom: 20px;
+}
+
+.payment {
+  width: 320px;
+  height: auto;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 23px;
+  align-items: center;
+}
+
+.login {
+  color: #3778c2;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title .saveit {
+  color: #114279;
+  font-size: 34px;
+  font-weight: 700;
+  text-shadow: 2px 2px #ed7e7e;
+}
+
+.title .slogan {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #3778c2;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.title .para {
+  font-size: 15px;
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile) */
+@media (max-width: 768px) {
+  #splash_screens h4 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .payment {
+    width: 320px; /* Adjust image size for smaller screens */
+  }
+
+  .title p {
+    font-size: 19px; /* Reduce font size for smaller screens */
+  }
+}

@@ -1,0 +1,24 @@
+  <div class="back-top">
+    <%= link_to categories_path, class: "no-deco" do %>
+      <%= image_tag "previous.png", alt: "back button", class: "back" %>
+    <% end %>
+    <%# <%= link_to "Back to categories", categories_path, class: "btn btn-secondary btn-sm" %>  
+  </div>
+
+  <div id="spends">
+  <h2 class="head-2">Transactions</h2>
+     <% total_value = 0 %>
+  <% @spends.each do |spend| %>
+    <% total_value += spend.amount %> 
+  <% end %>
+<div class="total">
+  <h3 class="t-spend"> Total Spend:</h3>
+  <h3 class="t-value">$<%= total_value %> </h3>
+</div>
+<div class="spend-group">
+  <% @spends.each do |spend| %>
+    <%= render spend %>
+  <% end %>
+  </div>
+<%= link_to "New spend", new_category_spend_path, class: "btn btn-secondary" %>
+</div>

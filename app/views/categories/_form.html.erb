@@ -1,0 +1,28 @@
+<%= form_with(model: category) do |form| %>
+  <% if category.errors.any? %>
+    <div class="alert alert-danger mt-3">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group mt-4">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="form-group mt-2">
+    <%= form.label :icon %>
+    <%= form.text_field :icon, class: "form-control", autofocus: true, autocomplete: "icon" %>
+  </div>
+
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="form-group text-center mt-3">
+    <%= form.submit "Create Category", class: "btn btn-primary" %>
+  </div>
+<%end%>
