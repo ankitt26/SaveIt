@@ -12,7 +12,7 @@
 .head-2 {
   font-family: "Courier New", Courier, monospace;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 33px;
   color: #b9c4d1;
   background-color: #3778c2;
   padding-top: 10px;
@@ -33,16 +33,18 @@
   border: 2px solid rgb(216, 213, 213);
   border-radius: 8px;
   padding: 6px;
+  padding-bottom: 0;
 }
 
 .t-spend {
   color: #3778c2;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 25px;
+  word-wrap: normal;
 }
 
 .t-value {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .spend-group {
