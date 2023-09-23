@@ -21,6 +21,8 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [📽️ Presentation ](#️-presentation-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -57,6 +59,22 @@ The SaveIt app is a mobile web application where you can manage your budget: you
 - *see the money spent on each category.*
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- VIDEO PRESENTATION -->
+
+## 📽️ Presentation <a name="live-demo"></a>
+
+> [📷 see video ](https://www.loom.com/share/fadf02e040d047be85d10a23f0d2a5b6?sid=6e4bef91-4d4f-4d34-ac4b-76e2af157546)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+ ## 🚀 Live Demo <a name="live-demo"></a>
+
+> [🎉 see live ](https://saveit-ankit.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
 <!-- GETTING STARTED -->
 
