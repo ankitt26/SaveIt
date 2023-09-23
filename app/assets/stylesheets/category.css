@@ -59,3 +59,8 @@
   font-family: cursive;
   color: #434b54;
 }
+
+.extra {
+  text-align: left;
+  min-width: 120px;
+}
