@@ -15,13 +15,13 @@
  */
 
 .switch {
-  width: 30px;
-  opacity: 0.5;
-  margin: 2px auto auto 2px;
+  width: 40px;
+  opacity: 0.8;
+  margin: 8px auto auto 8px;
 }
 
 .back {
-  width: 30px;
+  width: 40px;
   margin: 2px -3px auto 2px;
 }
 
@@ -40,6 +40,7 @@
 }
 
 /* categories = c */
-.c-icon {
+
+/* .c-icon {
   width: 60px;
-}
+} */

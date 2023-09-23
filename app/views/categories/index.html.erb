@@ -1,12 +1,17 @@
  <% if user_signed_in?%>
   <%= link_to destroy_user_session_path, method: :delete, data: { turbo_method: :delete } do %>
-  <%= image_tag "switch.png", alt: "Sign Out", class: "switch" %>
-<% end %><% end %>
+  <%= image_tag "switch.png", alt: "Sign Out", class: "switch back-top " %>
+  <% end %>
+<% end %>
+
 <div id="categories">
-  <h1>Categories</h1>
+  <h2 class="head-2">Categories</h2>
+   <div class="category-group">
    <% @categories.each do |category| %>
     <%= render category %>
   <% end %>
-</div>
+  </div>
 
-<%= link_to "New category", new_category_path %>
+
+<%= link_to "New category", new_category_path, class: "btn btn-secondary btn-sm" %>
+</div>
