@@ -28,11 +28,21 @@
   justify-content: center;
   column-gap: 32px;
   color: #434b54;
-  font-family: cursive;
+  font-family: monospace, circular, sans-serif;
   background-color: #fff;
   border: 2px solid rgb(216, 213, 213);
   border-radius: 8px;
   padding: 6px;
+}
+
+.t-spend {
+  color: #3778c2;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.t-value {
+  font-size: 28px;
 }
 
 .spend-group {
@@ -70,9 +80,8 @@
 
 .spend-amount {
   font-weight: 500;
-  font-family: cursive;
+  font-family: monospace, circular, sans-serif;
   color: #434b54;
-
   /* min-width: 130px; */
   position: relative;
   bottom: 20px;
