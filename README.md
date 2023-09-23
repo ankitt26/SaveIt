@@ -109,7 +109,8 @@ To run tests, run the following command:
 Example command:
 
 ```sh
-  coming soon.....
+  rails db:reset RAILS_ENV=test
+  rspec spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -130,9 +131,8 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] _User can Login_
-- [ ] _User can Create transactions_
-- [ ] _Select Category_
+- [ ] _User can delete_
+- [ ] _User can public categories_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
