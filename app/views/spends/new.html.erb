@@ -1,9 +1,18 @@
-<h1>New spend</h1>
-
-<%= render "form", spend: @spend %>
-
-<br>
-
-<div>
-  <%= link_to "Back to spends", category_spends_path %>
+<div class="container mt-1">
+  <div class="back-top">
+    <%= link_to category_spends_path, class: "no-deco" do %>
+      <%= image_tag "previous.png", alt: "back button", class: "back" %>
+    <% end %>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-6 text-left">
+      <h2 class=" text-center mt-3">New Spend</h2>
+      <%= render "form", spend: @spend %>
+     <%# <div class="row mt-3">
+    <div class="col-md-2">
+      <%= link_to "Back to Spends", category_spends_path, class: "btn btn-secondary btn-sm" %>
+    <%# </div>
+  </div> %>
+</div>
+</div>
 </div>

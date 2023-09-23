@@ -1,0 +1,72 @@
+#spends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  row-gap: 15px;
+  color: #434b54;
+  background-color: #eee;
+  height: 100vh;
+}
+
+.head-2 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  font-size: 35px;
+  color: #b9c4d1;
+  background-color: #3778c2;
+  padding-top: 10px;
+  width: 100%;
+  height: 58px;
+  text-align: center;
+}
+
+.total-spend {
+  color: #434b54;
+  font-family: cursive;
+}
+
+.spend-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 96%;
+  max-width: 850px;
+  margin: 1px auto;
+}
+
+.spend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  border: 2px solid rgb(202, 202, 226);
+  padding: 10px;
+}
+
+.spend-name {
+  color: #434b54;
+  opacity: 0.7;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.spend-created {
+  font-style: italic;
+  max-width: 73%;
+  word-wrap: normal;
+}
+
+.spend-amount {
+  font-weight: 700;
+  font-family: cursive;
+  color: #434b54;
+  min-width: 130px;
+}
+
+.extra {
+  text-align: left;
+  min-width: 120px;
+}
