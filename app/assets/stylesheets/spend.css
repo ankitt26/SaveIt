@@ -52,16 +52,17 @@
   font-weight: 700;
   margin-left: 0;
 }
+
 .spend-created {
   font-style: italic;
   max-width: 73%;
   word-wrap: normal;
 }
+
 .spend-amount {
   font-weight: 700;
   font-family: cursive;
   color: #434b54;
-  max-width: fit-content;
   min-width: 130px;
 }
 
